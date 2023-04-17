@@ -112,26 +112,25 @@ SELECT *
 FROM Service_Staff
 
 
-SELECT add_invoice_vehicle('Jan 2, 2023', 7000.00, 3, 22);
-SELECT add_invoice_vehicle('Dec 6, 2023', 5000.00, 7, 24);
-SELECT add_invoice_vehicle('Nov 10, 2023', 10000.00, 9, 26);
-SELECT add_invoice_vehicle('Oct 15, 2023', 15000.00, 1, 28);
+SELECT add_invoice_vehicle('Jan 2, 2023', 7000.00, 1, 1);
+SELECT add_invoice_vehicle('Dec 6, 2023', 5000.00, 2, 2);
+SELECT add_invoice_vehicle('Nov 10, 2023', 10000.00, 3, 3);
+SELECT add_invoice_vehicle('Oct 15, 2023', 15000.00, 4, 4);
 
 SELECT *
 FROM Invoice_Vehicle
---error Key (vehicle_id)=(22) is not present in table "vehicle".
+
 SELECT *
-FROM vehicle
-SELECT max(id) FROM vehicle
-INSERT INTO vehic
+FROM sales_staff
 
--- SELECT add_service_ticket('oil change', 'Jan 2, 2023', 78000, 108.00, 3, 22);
--- SELECT add_service_ticket('engine change', 'Dec 6, 2023', 200000, 3000.00, 7, 24);
--- SELECT add_service_ticket('transmission change', 'Nov 10, 2023', 108000, 800.00, 9, 26);
--- SELECT add_service_ticket('gas leak', 'Oct 15, 2023', 90000, 7000.00, 1, 28);
 
--- SELECT *
--- FROM Service_Ticket
+SELECT add_service_ticket('oil change', 'Jan 2, 2023', 78000, 108.00, 1, 1);
+SELECT add_service_ticket('engine change', 'Dec 6, 2023', 200000, 3000.00, 2, 2);
+SELECT add_service_ticket('transmission change', 'Nov 10, 2023', 108000, 800.00, 3, 3);
+SELECT add_service_ticket('gas leak', 'Oct 15, 2023', 90000, 7000.00, 4, 4);
+
+SELECT *
+FROM Service_Ticket
 
 SELECT add_mechanic_staff('James', 'Brown');
 SELECT add_mechanic_staff('Suga', 'Shay');
@@ -142,13 +141,16 @@ SELECT *
 FROM Mechanic_Staff
 
 
--- SELECT add_mechanic_service(42, 53);
--- SELECT add_mechanic_service(44, 55);
--- SELECT add_mechanic_service(46, 57);
--- SELECT add_mechanic_service(48, 59);
+SELECT add_mechanic_service(1, 5);
+SELECT add_mechanic_service(2, 6);
+SELECT add_mechanic_service(4, 7);
+SELECT add_mechanic_service(3, 8);
 
--- SELECT *
--- FROM Mechanic_Service
+SELECT *
+FROM Mechanic_Service
+
+SELECT *
+FROM service_ticket
 
 
 
